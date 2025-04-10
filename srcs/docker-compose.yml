@@ -2,7 +2,6 @@ services:
 
   # mariadb container ------------------------------------------------------------
 
-  # this is the only container that no depend on the others, so its the first to be created
   mariadb:
     container_name: mariadb
     build: ./requirements/mariadb/
@@ -17,7 +16,6 @@ services:
 
   # wordpress container ------------------------------------------------------------
 
-  # this is the second container to be created, it depends on the mariadb container
   wordpress:
     container_name: wordpress
     build: ./requirements/wordpress/
@@ -34,9 +32,6 @@ services:
 
   # nginx container ------------------------------------------------------------
 
-  # this is the last container to be created, it depends on the wordpress container
-  # it use args to pass the certificate and key path to the Dockerfile
-  # in the build moment with show the private informations that where in the .env file
   nginx:
     container_name: nginx
     build:
@@ -65,13 +60,10 @@ services:
       - wordpress
 
 # volumes --------------------------------------------------------------------
-
-# keeps the data shared between the containers
 # it acts like a shared hard drive between the containers and the host machine
-# device: where the data will be stored in the host machine
+
 volumes:
 
-  # keeps the database
   database:
     driver: local
     driver_opts:
@@ -79,7 +71,6 @@ volumes:
       o: bind
       device: ~/data/database
 
-  # keeps the wordpress files
   wordpress_files:
     driver: local
     driver_opts:
@@ -88,11 +79,8 @@ volumes:
       device: ~/data/wordpress_files
 
 # networks --------------------------------------------------------------------
-
-# this network is used to connect the containers
-# it acts like a virtual switch between the containers
 # all is the name of the network
-# bridge is the type of the network
+
 networks:
   all:
     driver: bridge

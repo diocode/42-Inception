@@ -41,6 +41,7 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
+
 define( 'AUTH_KEY',         '' );
 define( 'SECURE_AUTH_KEY',  '' );
 define( 'LOGGED_IN_KEY',    '' );
@@ -58,6 +59,7 @@ define( 'NONCE_SALT',       '' );
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
+
 $table_prefix = 'wp_';
 
 /**
@@ -72,11 +74,10 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
+
 define( 'WP_DEBUG', true );
 
 /* Add any custom values between this line and the "stop editing" line. */
-
-
 
 /* That's all, stop editing! Happy publishing. */
 
