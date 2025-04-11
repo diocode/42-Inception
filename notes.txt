@@ -1,0 +1,16 @@
+Evaluation sheet:
+- How Docker and docker compose work
+- The difference between a Docker image used with docker compose and without docker compose
+- The benefit of Docker compared to VMs
+- The pertinence of the directory structure required for this project (an example is provided in the subject's PDF file)
+- Explanation of docker-network
+
+
+Personal:
+- Makefile commands
+- Docker file commands
+- Docker-compose logic
+- Docker file logic
+- NGINX and SSL/TLS meaning
+- php-fpm meaning
+- login into the database
