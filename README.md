@@ -11,7 +11,7 @@
 	<a href="#about">About</a>
 </p>
 
-## ABOUT 
+## ABOUT ([Subject](/.github/en.subject.pdf))
 
 **Inception** is a foundational DevOps project designed to teach infrastructure deployment using **Docker**, **Docker Compose**, and basic **system administration** principles. The goal is to containerize and configure a small web infrastructure composed of essential services while adhering to best practices for security, networking, and container lifecycle management.
 
